@@ -80,3 +80,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.container {
+  @apply mx-auto w-full;
+}
