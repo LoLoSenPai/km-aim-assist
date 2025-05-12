@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
 import { Button } from '@/components/ui/button';
-import { paymentMethods, products } from '@/stripe-config';
+import { products } from '@/lib/stripe-config';
 import { loadStripe } from '@stripe/stripe-js';
 import { CreditCard, Bitcoin } from 'lucide-react';
 
@@ -73,7 +73,7 @@ export default function PaymentMethods() {
       </Button>
 
       <PayPalScriptProvider options={{ 
-        "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!,
+        clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!,
         currency: "USD"
       }}>
         <PayPalButtons
