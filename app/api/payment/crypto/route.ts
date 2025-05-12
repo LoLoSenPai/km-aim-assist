@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+// @ts-ignore
 import { Client, resources } from 'coinbase-commerce-node';
 import { products } from '@/lib/stripe-config';
 
